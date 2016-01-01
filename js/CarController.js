@@ -8,7 +8,9 @@ var carForm = angular.module( 'carForm', []);
 /*
  * Define a "CarController" controller for our "carForm" application.
  * Also, think of "$scope" of the JavaScript "this" keyword on
- * steroids.
+ * steroids because as per the info in
+ * http://bit.ly/angular-scope-this, "this" and scope MIGHT be 
+ * interchangeable.
  */
 carForm.controller( 'CarController', ['$scope', function( $scope ) {
   
@@ -20,10 +22,18 @@ carForm.controller( 'CarController', ['$scope', function( $scope ) {
 
   /*
    * Create an empty object called "master" and attach it to our app
-   * context
+   * context via "$scope".
    */
   $scope.master = {};
 
+  /*
+   * Create a method called "update()" and" attach it to our app
+   * context via "$scope". When our form is submitted, our app looks
+   * for the "user" object that's "created" in index.html and contains
+   * all the info added to the inputs. On a submit, the info in "user"
+   * gets deep-copied to "$scope.master" via Angular's internal
+   * "copy()" method.
+   */
   $scope.update = function( user ) {
     $scope.master = angular.copy( user );
   };
