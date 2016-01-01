@@ -27,7 +27,7 @@
 
       E-mail:
       <input type="email" ng-model="user.email" name="uEmail" required="" /><br />
-      
+
       <div ng-show="form.$submitted || form.uEmail.$touched">
         <span ng-show="form.uEmail.$error.required">Tell us your email.</span>
         <span ng-show="form.uEmail.$error.email">This is not a valid email.</span>
@@ -47,7 +47,7 @@
     </div>
 
     <input type="button" ng-click="reset(form)" value="Reset" />
-    <input type="submit" ng-click="update(user)" value="Save" />
+    <input id="submit-button" type="submit" ng-click="update(user)" value="Save" />
   </form>
   <pre>user = {{user | json}}</pre>
   <pre>master = {{master | json}}</pre>
