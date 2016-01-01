@@ -51,7 +51,7 @@ carForm.controller( 'CarController', ['$scope', function( $scope ) {
     /*
      * When our form is reset, scroll it back its state. Set the
      * overall form state as "not used" with the "$setPristine()
-     *" method and set all the input elements as not used with
+     * " method and set all the input elements as not used with
      * "$setUntouched()".
      */
     if ( form ) {
