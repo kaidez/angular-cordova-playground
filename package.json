@@ -1,0 +1,18 @@
+{
+  "name": "angular-cordova-playground",
+  "version": "0.0.1",
+  "description": "A practice mobile app using Angular and Cordova",
+  "main": "n/a",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "cordova"
+  ],
+  "author": "Kai \"kaidez\" Gittens",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "^1.4.8"
+  }
+}
