@@ -28,14 +28,16 @@ carForm.controller( 'CarController', ['$scope', function( $scope ) {
 
   /*
    * Create a method called "update()" and" attach it to our app
-   * context via "$scope". When our form is submitted, our app looks
-   * for the "user" object that's "created" in index.html and contains
-   * all the info added to the inputs. On a submit, the info in "user"
-   * gets deep-copied to "$scope.master" via Angular's internal
-   * "copy()" method.
+   * context via "$scope". 
    */
   $scope.update = function( user ) {
 
+    /*
+     * When our form is submitted, our app looks for the "user" object
+     * that's "created" in index.html and contains all the info added
+     * to the inputs. On a submit, the info in "user" gets deep-copied
+     * to "$scope.master" via Angular's internal "copy()" method.
+     */
     $scope.master = angular.copy( user );
 
   };
@@ -46,6 +48,12 @@ carForm.controller( 'CarController', ['$scope', function( $scope ) {
    */
   $scope.reset = function( form ) {
 
+    /*
+     * When our form is reset, scroll it back its state. Set the
+     * overall form state as "not used" with the "$setPristine()
+     *" method and set all the input elements as not used with
+     * "$setUntouched()".
+     */
     if ( form ) {
       form.$setPristine();
       form.$setUntouched();
