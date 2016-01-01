@@ -4,8 +4,6 @@
 
 * uses partials
 
-* 2-way binding
-
 * excellent templating engine with `{{ }}` embedded in the HTML
 
 * uses "directives", which are commands in HTML that tell Angular to do stuff at a certain place on the page.  They're created using `ng-`.
@@ -26,7 +24,7 @@
 
 * a "service" is a small piece of code that takes care of common tasks.
 
-* $http can mess up when using minified Angular. Make sure to pass it and $scope properly (see Ray's core Angular course).
+* `$http` can mess up when using minified Angular. Make sure to pass it and $scope properly (see Ray's core Angular course).
 
 * `ng-model` is a directive that binds form elements to a property on the scope using `NgModelController`, which is created and exposed by this directive.
 
