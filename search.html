@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="carSearch">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Uber</title>
+  
+  <script src="js/libs/angular.min.js"></script>
+  <script src="js/SearchController.js"></script>
+</head>
+
+<body>
+
+  <!-- Bind a controller that's part of our Angular app to the page -->
+  <div id="form-container" ng-controller="SearchController">
+
+    <form id="car-search-form" name="form" class="css-form"
+      novalidate>
+
+      <label for="name">
+
+        Find a car: <input type="text" ng-model="user.name" name="name" />
+
+      </label>
+
+      <section id="car-results">
+       
+       <h1>Your search results...</h1>
+       
+        <article ng-repeat="item in carData">
+
+          
+          <!-- For images, remember <img ng-src=""> -->
+
+          <h2>{{ item.car_name }}</h2>
+          <p>{{ item.car_type }}</p>
+          <p>{{ item.car_year }}</p>
+
+        </article>
+
+      </section> <!-- #car-results -->
+
+  </form> <!-- #car-search-form -->
+
+  </div> <!-- #form-container -->
+</body>
+</html>
