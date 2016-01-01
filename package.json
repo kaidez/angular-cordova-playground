@@ -4,7 +4,9 @@
   "description": "A practice mobile app using Angular and Cordova",
   "main": "n/a",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-sass": "node-sass css-build/style.scss | cleancss -o css-build/style.css",
+    "concat-css": "cat css-build/*.css > build/css/style.css"
   },
   "keywords": [
     "angular",
