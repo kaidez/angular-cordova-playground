@@ -19,5 +19,9 @@
   "dependencies": {
     "angular": "^1.4.8",
     "bootstrap": "^3.3.6"
+  },
+  "devDependencies": {
+    "clean-css": "^3.4.8",
+    "node-sass": "^3.4.2"
   }
 }
