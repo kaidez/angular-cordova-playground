@@ -21,8 +21,9 @@
     -->
     <form id="car-form" name="form" class="css-form"
       novalidate>
-    Name:
-      <input type="text" ng-model="user.name" name="uName" required="" /><br />
+      <label for="name">
+        Name: <input type="text" ng-model="user.name" name="name" required="" /><br />
+      </label>
 
       <div ng-show="form.$submitted || form.uName.$touched">
         <div ng-show="form.uName.$error.required">
