@@ -35,10 +35,17 @@ carForm.controller( 'CarController', ['$scope', function( $scope ) {
    * "copy()" method.
    */
   $scope.update = function( user ) {
+
     $scope.master = angular.copy( user );
+
   };
 
+  /*
+   * Create a method called "reset()" and" attach it to our app
+   * context via "$scope".
+   */
   $scope.reset = function( form ) {
+
     if ( form ) {
       form.$setPristine();
       form.$setUntouched();

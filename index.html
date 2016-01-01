@@ -13,9 +13,14 @@
 <body ng-app="carForm">
 
   <!-- Bind a controller that's part of our Angular app to the page -->
-  <div id="form-conatiner" ng-controller="CarController">
+  <div id="form-container"
+    ng-controller="CarController">
 
-    <form id="car-form" name="form" class="css-form" novalidate>
+    <!--
+      From this point forward, the carForm app has two objects/models/whatever: "user" and "master". "user" contains any data in entered into an input, and it will get copied over to "master" on submission.   
+    -->
+    <form id="car-form" name="form" class="css-form"
+      novalidate>
     Name:
       <input type="text" ng-model="user.name" name="uName" required="" /><br />
 
@@ -48,11 +53,12 @@
 
     <input type="button" ng-click="reset(form)" value="Reset" />
     <input id="submit-button" type="submit" ng-click="update(user)" value="Save" />
-    
+
   </form> <!-- #car-form -->
 
   <pre>user = {{user | json}}</pre>
   <pre>master = {{master | json}}</pre>
-  </div> <!-- #form-conatiner -->
+
+  </div> <!-- #form-container -->
 </body>
 </html>
