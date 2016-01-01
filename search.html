@@ -13,33 +13,30 @@
   <!-- Bind a controller that's part of our Angular app to the page -->
   <div id="form-container" ng-controller="SearchController">
 
-    <form id="car-search-form" name="form" class="css-form"
-      novalidate>
+    <div class="search" id="search-box">
 
-      <label for="name">
+      <label for="name">Search: </label>
 
-        Find a car: <input type="text" ng-model="user.name" name="name" />
+      <input ng-model="query" placeholder="Find a car" type="text" autofocus>
 
-      </label>
+    </div> <!-- #search-box -->
 
-      <section id="car-results">
+    <section id="car-results">
        
-       <h1>Your search results...</h1>
-       
-        <article ng-repeat="item in carData">
+      <h1>Your search results...</h1>
 
-          
-          <!-- For images, remember <img ng-src=""> -->
+      <article class="single-car-result" ng-repeat="item in carData | filter: query">
 
-          <h2>{{ item.car_name }}</h2>
-          <p>{{ item.car_type }}</p>
-          <p>{{ item.car_year }}</p>
+        <!-- For images, remember <img ng-src=""> -->
 
-        </article>
+        <h2>{{ item.car_name }}</h2>
 
-      </section> <!-- #car-results -->
+        <p>{{ item.car_type }}</p>
+        <p>{{ item.car_year }}</p>
 
-  </form> <!-- #car-search-form -->
+      </article>
+
+    </section> <!-- #car-results -->
 
   </div> <!-- #form-container -->
 </body>
