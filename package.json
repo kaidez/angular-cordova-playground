@@ -5,8 +5,10 @@
   "main": "n/a",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-sass": "node-sass css-build/style.scss | cleancss -o css-build/style.css",
-    "concat-css": "cat css-build/*.css > build/css/style.css"
+    "buildsass": "node-sass css-build/styles.scss | cleancss -o css-build/styles.css",
+    "concatcss": "cat css-build/*.css > build/css/styles.css",
+    "buildcss": "npm run build-sass && npm run concat-css",
+    "watchcss": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'"
   },
   "keywords": [
     "angular",
