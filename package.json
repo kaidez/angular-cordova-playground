@@ -5,6 +5,7 @@
   "main": "n/a",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "buildjade": "jade jade/index.jade -o build/",
     "buildsass": "node-sass css-build/styles.scss | cleancss -o css-build/styles.css",
     "concatcss": "cat css-build/*.css > build/css/styles.css",
     "buildcss": "npm run buildsass && npm run concatcss",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "clean-css": "^3.4.8",
+    "jade": "^1.11.0",
     "node-sass": "^3.4.2"
   }
 }
