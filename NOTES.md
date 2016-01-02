@@ -42,6 +42,8 @@
 
 * `$routeParams` hold info about that data in your object/whatever & use it to get the routes working.
 
+* Angular routes need views
+
 ## Angular Form Validation
 
 * common form attributes are added as directives.
