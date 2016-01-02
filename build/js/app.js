@@ -27,7 +27,7 @@ carSearch.config(['$routeProvider', function( $routeProvider ){
   when('/list', { 
     
     // ...load this partial on the page...
-    templateUrl: 'partials/all-cars.html', 
+    templateUrl: 'views/all-cars.html', 
     
     // ...and add content to it with help from "SearchListController"
     controller: 'SearchListController'
@@ -43,7 +43,7 @@ carSearch.config(['$routeProvider', function( $routeProvider ){
   when('/details/:itemId', {
     
     // ...load this partial on the page...
-    templateUrl: 'partials/single-car.html',
+    templateUrl: 'views/single-car.html',
 
     // ...and add content to it with help from "SingleCarController"
     controller: 'SingleCarController'
