@@ -1,7 +1,21 @@
-.single-car {
+.single-car-result {
   opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
 }
 
-.single-car:hover {
-  opacity: .5;
+.single-car-result:hover {
+ opacity: .5;
+}
+
+.single-car-result.ng-enter.ng-enter-active,
+.single-car-result.ng-leave {
+  opacity: 1;
+  height: 80px;
+}
+
+.single-car-result.ng-leave.ng-leave-active,
+.single-car-result.ng-enter {
+  opacity: 0;
+  height: 0;
 }
