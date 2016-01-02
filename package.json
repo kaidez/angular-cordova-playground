@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "buildjade": "jade jade/index.jade -o build/",
+    "buildjade-views": "jade jade/views/*.jade -o build/views/",
     "buildsass": "node-sass css-build/styles.scss | cleancss -o css-build/styles.css",
     "concatcss": "cat css-build/*.css > build/css/styles.css",
     "buildcss": "npm run buildsass && npm run concatcss",
