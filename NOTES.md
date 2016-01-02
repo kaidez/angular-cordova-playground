@@ -1,8 +1,6 @@
 # NOTES
 
-* SPA
-
-* uses partials
+* Angular likes to fail silently sometimes...make sure that your quotes are closed, that you don't use quotes where you don't need them, etc.
 
 * excellent templating engine with `{{ }}` embedded in the HTML
 
@@ -42,7 +40,7 @@
 
 * `$routeParams` hold info about that data in your object/whatever & use it to get the routes working.
 
-* Angular routes need views
+* Angular routes need views to work properly.
 
 ## Angular Form Validation
 
