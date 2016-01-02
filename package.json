@@ -10,7 +10,8 @@
     "buildsass": "node-sass css-build/styles.scss | cleancss -o css-build/styles.css",
     "concatcss": "cat css-build/*.css > build/css/styles.css",
     "buildcss": "npm run buildsass && npm run concatcss",
-    "watchcss": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'"
+    "watchcss": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'",
+    "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css css-build/bootstrap.css"
   },
   "keywords": [
     "angular",
@@ -29,6 +30,7 @@
   "devDependencies": {
     "clean-css": "^3.4.8",
     "jade": "^1.11.0",
+    "ncp": "^2.0.0",
     "node-sass": "^3.4.2"
   }
 }
