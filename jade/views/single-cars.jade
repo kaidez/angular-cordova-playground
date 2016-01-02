@@ -1,0 +1,7 @@
+section(class="car-info")
+  div("single-car" ng-model="carData")
+    h2 {{ carData[whichItem].car_name }}
+    p {{ carData[whichItem].car_type }}
+    p {{ carData[whichItem].car_year }}
+a(href="index.html")
+  | home 
