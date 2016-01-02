@@ -13,6 +13,11 @@
   clip: rect(1px, 1px, 1px, 1px);
 }
 
+/* Full-on centering */
+@mixin center {
+  margin: 0 auto;
+  text-align: center;
+}
 
 /* Off-screen text-indent */
 @mixin ti {
