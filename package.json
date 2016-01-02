@@ -11,6 +11,9 @@
     "concatcss": "cat css-build/*.css > build/css/styles.css",
     "buildcss": "npm run buildsass && npm run concatcss",
     "watchcss": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'",
+    "watch-jade": "nodemon -e jade -w jade -x 'npm run buildjade & npm run buildjade-views'",
+    "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'",
+    "watch": "npm run watch-jade & npm run watch-css",
     "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css css-build/bootstrap.css"
   },
   "keywords": [
