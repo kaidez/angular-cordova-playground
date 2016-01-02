@@ -11,24 +11,49 @@ var carSearch = angular.module( 'carSearch', [
   'carSearchControllers' 
 ]);
 
-// Configure the routes
+
+/* ============================================ */
+/* DEFINE ROUTES WITH ANGULAR "$routeProvider"  */
+/* ============================================ */
+
 carSearch.config(['$routeProvider', function( $routeProvider ){
   $routeProvider.
   
-  // "/list" route config
-  when('/list', { // The route for listing all the cars
-    templateUrl: 'partials/all-cars.html',
+  /* =================================== */
+  /* "/list" route config: show all cars */
+  /* =================================== */
+  
+  // When going to the "/list" in the browser...
+  when('/list', { 
+    
+    // ...load this partial on the page...
+    templateUrl: 'partials/all-cars.html', 
+    
+    // ...and add content to it with help from "SearchListController"
     controller: 'SearchListController'
+
   }).
 
-  // "/details" route config
-  when('/details/:itemId', { // The route for listing one car
+
+  /* ======================================================= */
+  /* "/details/:itemId" route config: route for a single car */
+  /* ======================================================= */
+  
+  // When going to a "/details/:itemId" in the browser...
+  when('/details/:itemId', {
+    
+    // ...load this partial on the page...
     templateUrl: 'partials/single-car.html',
+
+    // ...and add content to it with help from "SingleCarController"
     controller: 'SingleCarController'
+
   }).
 
-  // config default route...no controllers
+  /* ======================================== */
+  /* Default route to go to...which is"/list" */
+  /* ======================================== */
   otherwise({ 
-    redirectTo: '/'
+    redirectTo: '/list'
   });
 }]);
