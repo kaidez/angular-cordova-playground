@@ -1,6 +1,6 @@
 h1= "Fake Uber"
 div(class="search" id="search-box")
-  input(ng-model="query" placeholder="Find a car" type="text" autofocus)
+  input(ng-model="query" class="searchbox" placeholder="Find a car" type="text" autofocus)
 
 section(id="car-results-list" ng-show="query")
   article(class="single-car-result" ng-repeat="item in carData | filter: query")
