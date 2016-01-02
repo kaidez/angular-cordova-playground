@@ -1,3 +1,10 @@
-label {
-  clear: both;
+/* Animation for a single cal link */
+.single-car-result {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+          transition: all 0.3s ease-out;
+}
+
+.single-car-result:hover {
+ opacity: .5;
 }
