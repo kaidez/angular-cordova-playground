@@ -1,6 +1,12 @@
-/* Center both the <h1> and the searchbox containing element */
+/* Style the <h1> */
 h1 {
+  width:223px;
+  height: 53px;
+
+  background: url("../images/logo.svg") no-repeat;
+
   @include center;
+  @include ti;
 }
 
 /* Style the core containing element */
@@ -22,14 +28,14 @@ h1 {
 
 /* Style the actual searchbox */
 .searchbox {
+  width:223px;
   padding: 8px;
   -webkit-border-radius: 4px;
           border-radius: 4px;
 
-  font-size: 19px;
+  font-size: 16px;
   border: 1px solid #B3b3b3;
 }
-
 
 /* Animation for a single cal link */
 .single-car-result {
