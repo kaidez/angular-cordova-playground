@@ -1,0 +1,12 @@
+div(class="search" id="search-box")
+  label
+    | Search:
+    input(ng-model="query" placeholder="Find a car" type="text" autofocus)
+
+section(id="car-results-list" ng-show="query")
+  article(class="single-car-result" ng-repeat="item in carData | filter: query")
+    a(href="#/details/{{ carData.indexOf( item ) }}" class="car-link")
+      div
+        h2 {{ item.car_name }}
+        p {{ item.car_type }}
+        p {{ item.car_year }}
