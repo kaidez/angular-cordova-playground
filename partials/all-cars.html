@@ -1,19 +1,22 @@
 <div class="search" id="search-box">
 
-  <label>Search: </label>
+  <label for="name">Search: </label>
 
     <input ng-model="query" placeholder="Find a car" type="text" autofocus>
 
 </div> <!-- #search-box -->
 <section id="car-results-list">
 
-  <article id="car-results" ng-repeat="item in carData | filter: query">
+  <article class="single-car-result" ng-repeat="item in carData | filter: query">
        
-  <a href="#/details/{{ carData.indexOf( item ) }}" class="car-link">
+    <!--
+      Wrap all car info in an <a> we can click to a single car partial
+    -->
+    <a href="#/details/{{ carData.indexOf( item ) }}" class="car-link">
   
-    <div class="single-car-result">
+      <div>
 
-      <!-- For images, remember <img ng-src=""> -->
+        <!-- For images, remember <img ng-src=""> -->
 
         <h2>{{ item.car_name }}</h2>
 
@@ -24,6 +27,6 @@
 
       </a> <!-- .car-link -->
 
-    </article>
+    </article> <!-- .single-car-result -->
 
 </section> <!-- #car-results-list -->
