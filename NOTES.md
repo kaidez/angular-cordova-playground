@@ -1,6 +1,6 @@
 # NOTES
 
-* Angular likes to fail silently sometimes...make sure that your quotes are closed, that you don't use quotes where you don't need them, etc.
+* Angular likes to fail silently sometimes...make sure that your quotes are closed, that you don't use quotes where you don't need them, that you've created a controller, etc.
 
 * excellent templating engine with `{{ }}` embedded in the HTML
 
