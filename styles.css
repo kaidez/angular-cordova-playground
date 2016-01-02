@@ -1,0 +1,7 @@
+.single-car {
+  opacity: 1;
+}
+
+.single-car:hover {
+  opacity: .8;
+}
