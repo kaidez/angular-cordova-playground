@@ -1,6 +1,6 @@
-/* Style the <h1> */
-
-h1 {
+/* Center both the <h1> and the searchbox containing element */
+h1,
+.searchbox-container {
   margin: 0 auto;
 
   text-align: center;
@@ -10,9 +10,20 @@ h1 {
 .container-class {
   width:300px;
   margin: 0 auto;
+  padding-top: 20px;
 
   background-color: #f5f5f5;
 }
+
+/* Style the searchbox */
+.searchbox {
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+
+  font-size: 20px;
+  border: 1px solid #B3b3b3;
+}
+
 
 /* Animation for a single cal link */
 .single-car-result {
