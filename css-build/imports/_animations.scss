@@ -2,19 +2,20 @@
 /* FADE IN THE SEARCH BOX                                            */
 /* ================================================================= */
  @keyframes fade-in-logo {
-  from { opacity: 0; transform: translateY( 0px ); }
-  to   { opacity: 1; transform: translateY( 75px ); }
+  0%   { opacity: 0; transform: translateY( 0px ); }
+  45% { opacity: 1; transform: translateY( 63px ); }
+  100% { opacity: 1; transform: translateY( 75px ); }
 }
 
 .logo-fade {
   -webkit-animation-name: fade-in-logo;
-  -webkit-animation-duration: .8s;
+  -webkit-animation-duration: .6s;
   -webkit-animation-timing-function : ease-in;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
 
   animation-name: fade-in-logo;
-  animation-duration: .8s;
+  animation-duration: .6s;
   animation-timing-function : ease-in;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
@@ -22,19 +23,20 @@
 
 
  @keyframes fade-in-searchbox {
-  from { opacity: 0; transform: translateY( 0px ); }
-  to   { opacity: 1; transform: translateY( -75px ); }
+  0%   { opacity: 0; transform: translateY( 0px ); }
+  45%   { opacity: .75; transform: translateY( -63px ); }
+  100% { opacity: 1; transform: translateY( -75px ); }
 }
 
 .searchbox-fade {
   -webkit-animation-name: fade-in-searchbox;
-  -webkit-animation-duration: .8s;
+  -webkit-animation-duration: .6s;
   -webkit-animation-timing-function : ease-in;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
 
   animation-name: fade-in-searchbox;
-  animation-duration: .8s;
+  animation-duration: .6s;
   animation-timing-function : ease-in;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
