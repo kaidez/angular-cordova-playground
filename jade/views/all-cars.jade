@@ -1,8 +1,8 @@
 #inner-container
   h1(class="logo-fade")
     |"Fake Uber"
-  div(class="searchbox-container searchbox-fade" id="search-box")
-    input(ng-model="query" class="searchbox" placeholder="Schedule a car pick-up..." type="text" autofocus)
+  div(class="searchbox-container searchbox-fade" id="search-box" ng-click="blur()")
+    input(ng-model="query" class="searchbox" placeholder="Schedule a car pick-up..." type="text")
 
 section(id="car-results-list" ng-show="query")
   article(class="single-car-result" ng-repeat="item in carData | filter: query")
