@@ -24,6 +24,9 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
   $http.get( 'js/cars.json' ).success( function( data ) {
 
     $scope.carData = data;
+    $scope.blur = function() {
+      $( "#inner-container" ).addClass( "move-search-container" );
+    };
 
   });
 
@@ -32,7 +35,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 
 
 /* ================================================================= */
-/* CONTROLLER FOR SHOWINGA SINGLE CAR...is also pulling route info   */
+/* CONTROLLER FOR SHOWING A SINGLE CAR...is also pulling route info   */
 /* via $routeParams and globally sharing it with our app             */
 /* ================================================================= */
 
@@ -49,7 +52,7 @@ carSearchControllers.controller( 'SingleCarController', [ '$scope', '$http', '$r
 
     $scope.carData = data;
     $scope.whichItem = $routeParams.itemId;
-
+ 
   });
 
 }]);
