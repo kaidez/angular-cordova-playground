@@ -10,10 +10,12 @@
     "buildsass": "node-sass css-build/styles.scss | cleancss -o css-build/styles.css",
     "concatcss": "cat css-build/*.css > build/css/styles.css",
     "buildcss": "npm run buildsass && npm run concatcss",
+    "buildjs": "browserify js-build/*.js -o build/js/scripts.js",
     "watchcss": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'",
     "watch-jade": "nodemon -e jade -w jade -x 'npm run buildjade & npm run buildjade-views'",
     "watch-css": "nodemon -e scss -w css-build -w css-build/imports -x 'npm run buildcss'",
-    "watch": "npm run watch-jade & npm run watch-css",
+    "watch-js": "nodemon -e js -w js-build -x 'npm run buildjs'",
+    "watch": "npm run watch-jade & npm run watch-css & npm run watch-js",
     "copy-bootstrap": "ncp node_modules/bootstrap/dist/css/bootstrap.css css-build/bootstrap.css"
   },
   "keywords": [
@@ -28,7 +30,8 @@
   "license": "MIT",
   "dependencies": {
     "angular": "^1.4.8",
-    "bootstrap": "^3.3.6"
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.1.4"
   },
   "devDependencies": {
     "clean-css": "^3.4.8",
