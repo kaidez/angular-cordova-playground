@@ -4,7 +4,7 @@
   div(class="searchbox-container searchbox-fade" id="search-box" ng-click="blur()")
     input(ng-model="query" class="searchbox" placeholder="Schedule a car pick-up..." type="text")
 
-section(id="car-results-list" ng-show="query")
+section(id="car-results-list" ng-show="query" class="car-results-container")
   article(class="single-car-result" ng-repeat="item in carData | filter: query")
     a(href="#/details/{{ carData.indexOf( item ) }}" class="car-link")
       div
