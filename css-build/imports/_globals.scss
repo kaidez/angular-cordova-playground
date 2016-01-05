@@ -37,7 +37,11 @@ h1 {
   border: 1px solid #B3b3b3;
 }
 
-/* Animation for a single cal link */
+.car-results-container {
+  padding: 0 15px;
+} 
+
+/* Animation for a single car link */
 .single-car-result {
   opacity: 1;
   -webkit-transition: all 0.3s ease-out;
