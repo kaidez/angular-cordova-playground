@@ -23,10 +23,19 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
    */
   $http.get( 'js/cars.json' ).success( function( data ) {
 
-    $scope.carData = data;
-    $scope.blur = function() {
-      $( "#inner-container" ).addClass( "move-search-container" );
-      console.log($scope)
+    $scope.searchElementsUp = function() {
+      $( "#inner-container" ).addClass( "search-container-up" ).removeClass( "search-container-down" );
+        $("body").removeClass("search-is-down").addClass("search-is-up");
+    };
+
+    $scope.searchElementsDown = function() {
+      $( "#inner-container" ).addClass( "search-container-down" ).removeClass( "search-container-up" );
+        $("body").removeClass("search-is-up").addClass("search-is-down");
+    };
+
+    $scope.removeDownClass = function( e ) {
+      et.stopPropagation();
+      ( "#inner-container" ).removeClass("search-is-up");
     };
 
   });
@@ -36,7 +45,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 
 
 /* ================================================================= */
-/* CONTROLLER FOR SHOWING A SINGLE CAR...is also pulling route info   */
+/* CONTROLLER FOR SHOWING A SINGLE CAR...is also pulling route info  */
 /* via $routeParams and globally sharing it with our app             */
 /* ================================================================= */
 

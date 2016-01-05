@@ -40,18 +40,45 @@
   animation-fill-mode: forwards;
 }
 
-@keyframes move-search-box {
+@keyframes move-search-box-up {
   0%   { transform: translateY( 0px ); }
   100% { transform: translateY( -75px ); }
 }
-.move-search-container {
-  -webkit-animation-name: move-search-box;
+.search-container-up {
+  -webkit-animation-name: move-search-box-up;
   -webkit-animation-duration: .3s;
   -webkit-animation-timing-function : ease-in;
   -webkit-animation-iteration-count: 1;
   -webkit-animation-fill-mode: forwards;
 
-  animation-name: move-search-box;
+  animation-name: move-search-box-up;
+  animation-duration: .3s;
+  animation-timing-function : ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes move-search-box-down {
+  0%   { transform: translateY( -55px ); }
+  100% { transform: translateY( 0px ); }
+}
+.search-container-down {
+  -webkit-animation-name: move-search-box-down;
+  -webkit-animation-duration: .3s;
+  -webkit-animation-timing-function : ease-in;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+
+  animation-name: move-search-box-down;
   animation-duration: .3s;
   animation-timing-function : ease-in;
   animation-iteration-count: 1;
