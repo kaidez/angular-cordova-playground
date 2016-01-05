@@ -26,6 +26,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
     $scope.carData = data;
     $scope.blur = function() {
       $( "#inner-container" ).addClass( "move-search-container" );
+      console.log($scope)
     };
 
   });

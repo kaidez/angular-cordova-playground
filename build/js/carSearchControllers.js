@@ -23,7 +23,6 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
    */
   $http.get( 'js/cars.json' ).success( function( data ) {
 
-    $scope.carData = data;
     $scope.searchElementsUp = function() {
       $( "#inner-container" ).addClass( "search-container-up" ).removeClass( "search-container-down" );
         $("body").removeClass("search-is-down").addClass("search-is-up");
