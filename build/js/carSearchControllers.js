@@ -22,22 +22,9 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
    * When the data's been successfully retrieved, attach it to the
    * "$scope.carData" object
    */
+
   $http.get( 'js/cars.json' ).success( function( data ) {
-    $scope.searchElementsUp = function() {
-      el.addClass( "search-container-up" ).removeClass( "search-container-down" );
-        // $("body").removeClass("search-is-down").addClass("search-is-up");
-    };
-
-    $scope.searchElementsDown = function() {
-      el.addClass( "search-container-down" ).removeClass( "search-container-up" );
-        // $("body").removeClass("search-is-up").addClass("search-is-down");
-    };
-
-    $scope.removeDownClass = function( e ) {
-      et.stopPropagation();
-      ( "#inner-container" ).removeClass("search-is-up");
-    };
-
+    $scope.carData = data;
   });
 
 }]);
@@ -51,6 +38,8 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 
 carSearchControllers.controller( 'SingleCarController', [ '$scope', '$http', '$routeParams', function ( $scope, $http, $routeParams )  {
 
+  var getSearch = angular.element(document.querySelector("body"));
+  getSearch.attr("class", "")
   /*
    * When the data's been successfully retrieved, attach it to the
    * "$scope.carData" object. Also, create a value called "itemId" and
