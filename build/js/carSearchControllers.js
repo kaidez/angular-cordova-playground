@@ -17,7 +17,7 @@ var carSearchControllers = angular.module( 'carSearchControllers', []);
 /* ================================================================= */
 carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', function ( $scope, $http )  {
 
-  var el = angular.element(document.querySelector("#inner-container"));
+  var el = angular.element( document.querySelector( "#inner-container" ) );
   /*
    * When the data's been successfully retrieved, attach it to the
    * "$scope.carData" object
@@ -27,12 +27,6 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
     $scope.carData = data;
     $scope.searchElementsUp = function() {
       el.addClass( "search-container-up" ).removeClass( "search-container-down" );
-        // $("body").removeClass("search-is-down").addClass("search-is-up");
-    };
-
-    $scope.searchElementsDown = function() {
-      el.addClass( "search-container-down" ).removeClass( "search-container-up" );
-        // $("body").removeClass("search-is-up").addClass("search-is-down");
     };
 
     $scope.removeDownClass = function( e ) {
@@ -53,7 +47,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 
 carSearchControllers.controller( 'SingleCarController', [ '$scope', '$http', '$routeParams', function ( $scope, $http, $routeParams )  {
 
-  var getSearch = angular.element(document.querySelector("body"));
+  var getSearch = angular.element( document.querySelector( "body" ) );
 
   /*
    * When the data's been successfully retrieved, attach it to the
