@@ -54,7 +54,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 carSearchControllers.controller( 'SingleCarController', [ '$scope', '$http', '$routeParams', function ( $scope, $http, $routeParams )  {
 
   var getSearch = angular.element(document.querySelector("body"));
-  getSearch.attr("class", "")
+
   /*
    * When the data's been successfully retrieved, attach it to the
    * "$scope.carData" object. Also, create a value called "itemId" and
