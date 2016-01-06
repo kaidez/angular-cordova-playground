@@ -29,8 +29,7 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
       el.addClass( "search-container-up" ).removeClass( "search-container-down" );
     };
 
-    $scope.removeDownClass = function( e ) {
-      et.stopPropagation();
+    $scope.removeDownClass = function() {
       ( "#inner-container" ).removeClass("search-is-up");
     };
 
