@@ -25,6 +25,21 @@ carSearchControllers.controller( 'SearchListController', [ '$scope', '$http', fu
 
   $http.get( 'js/cars.json' ).success( function( data ) {
     $scope.carData = data;
+    $scope.searchElementsUp = function() {
+      el.addClass( "search-container-up" ).removeClass( "search-container-down" );
+        // $("body").removeClass("search-is-down").addClass("search-is-up");
+    };
+
+    $scope.searchElementsDown = function() {
+      el.addClass( "search-container-down" ).removeClass( "search-container-up" );
+        // $("body").removeClass("search-is-up").addClass("search-is-down");
+    };
+
+    $scope.removeDownClass = function( e ) {
+      et.stopPropagation();
+      ( "#inner-container" ).removeClass("search-is-up");
+    };
+
   });
 
 }]);
